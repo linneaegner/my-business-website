@@ -1,15 +1,10 @@
-<!--
-Bygg hemsidans HTML-struktur: header, navigationsmeny, startsida, informationssektion,
-kontaktsektion och footer. Använd semantiska HTML-element.
-Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitter.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linneas runclub — saturday runs with pop music, fika and glitter.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
@@ -19,9 +14,11 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
 </head>
 
 <body>
+    <a class="skip-link" href="#main">skip to content</a>
+
     <header class="hero">
         <img class="hero__image" src="images/race-legs.jpg"
-            alt="Runner jogging with thumbs up">
+            alt="Runner jogging with thumbs up" width="1600" height="1067">
         <div class="hero__content">
             <h1 class="hero__brand">linneas runclub</h1>
             <p class="hero__headline">pop music, fika &amp; glitter</p>
@@ -33,13 +30,19 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
     </header>
 
     <nav class="site-nav" aria-label="Main">
-        <ul>
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
+            <span class="menu-toggle__bars" aria-hidden="true"></span>
+            <span class="menu-toggle__label">menu</span>
+        </button>
+
+        <ul id="site-menu" class="site-nav__links">
             <li><a href="#fika-lovers">fika lovers</a></li>
             <li><a href="#runners">runners</a></li>
             <li><a href="#friends">friends</a></li>
             <li><a href="#playlists">playlists</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
+
         <div class="site-nav__actions">
             <button type="button" id="theme-toggle" class="nav-button" aria-pressed="false">
                 dark mode
@@ -47,7 +50,7 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
         </div>
     </nav>
 
-    <main>
+    <main id="main">
         <section id="fika-lovers" class="section section--about">
             <h2>who we are?</h2>
             <article class="about">
@@ -74,7 +77,7 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
                     </div>
                 </div>
                 <img src="images/fika-brunch.jpg"
-                    alt="Brunch and coffee on a wooden table">
+                    alt="Brunch and coffee on a wooden table" width="1200" height="900">
             </article>
         </section>
 
@@ -83,17 +86,17 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
             <ul class="runners">
                 <li>
                     <img src="images/runner-linnea.jpg"
-                        alt="Runner Linnea">
+                        alt="Runner Linnea" width="800" height="1067">
                     <p>Linnea</p>
                 </li>
                 <li>
                     <img src="images/runner-emma.jpg"
-                        alt="Runner Emma">
+                        alt="Runner Emma" width="800" height="1067">
                     <p>Emma</p>
                 </li>
                 <li>
                     <img src="images/runner-sara.jpg"
-                        alt="Runner Sara">
+                        alt="Runner Sara" width="800" height="1067">
                     <p>Sara</p>
                 </li>
             </ul>
@@ -101,7 +104,7 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
 
         <section id="friends" class="section section--join">
             <img class="join__image" src="images/group-run.jpg"
-                alt="Group of runners on a cobblestone street">
+                alt="Group of runners on a cobblestone street" width="1600" height="900">
             <div class="join__copy">
                 <h2>how to join us?</h2>
                 <article>
@@ -123,11 +126,11 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
                 <ul class="artwork__list">
                     <li>
                         <img src="images/start-here.jpg"
-                            alt="Running shoes next to a painted runner silhouette">
+                            alt="Running shoes next to a painted runner silhouette" width="1200" height="750">
                     </li>
                     <li>
                         <img src="images/motion-blur.jpg"
-                            alt="Motion blur of runners' legs on the road">
+                            alt="Motion blur of runners' legs on the road" width="1200" height="750">
                     </li>
                 </ul>
             </div>
@@ -139,6 +142,11 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
                 we have a playlist for every occasion. listen to the latest pop hits
                 and glitter your way to the finish line.
             </p>
+            <ul class="playlist-list">
+                <li>warmup glitter — soft pop before the first kilometre</li>
+                <li>tempo sparkle — chorus energy for the middle miles</li>
+                <li>fika cool-down — cozy tracks for coffee and chat</li>
+            </ul>
         </section>
 
         <section id="contact" class="section section--contact">
