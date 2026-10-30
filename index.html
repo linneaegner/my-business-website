@@ -1,13 +1,129 @@
+<!-- 
+Bygg hemsidans HTML-struktur: header, navigationsmeny, startsida, informationssektion,
+kontaktsektion och footer. Använd semantiska HTML-element.
+Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitter.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Linneas runclub</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/hero-runner.jpg"
+            alt="Runner jogging with thumbs up">
+        <h1>linneas runclub</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#fika-lovers">fika lovers</a></li>
+            <li><a href="#runners">runners</a></li>
+            <li><a href="#friends">friends</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="fika-lovers">
+            <h2>who we are?</h2>
+            <article>
+                <p>
+                    we are a running group that loves pop music, fika and glitter.
+                    our team unites people from different professions.
+                    during our post-run coffee you can hang out with artists,
+                    programmers or athletes. there's no chance of boredom with us!
+                </p>
+                <img src="images/fika-friends.jpg"
+                    alt="Friends having coffee after a run">
+            </article>
+            <img src="images/fika-brunch.jpg"
+                alt="Brunch and coffee on a wooden table">
+        </section>
+
+        <section id="runners">
+            <h2>meet our runners</h2>
+            <ul>
+                <li>
+                    <img src="images/runner-linnea.jpg"
+                        alt="Runner Linnea">
+                    <p>Linnea</p>
+                </li>
+                <li>
+                    <img src="images/runner-emma.jpg"
+                        alt="Runner Emma">
+                    <p>Emma</p>
+                </li>
+                <li>
+                    <img src="images/runner-sara.jpg"
+                        alt="Runner Sara">
+                    <p>Sara</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="friends">
+            <img src="images/group-run.jpg"
+                alt="Group of runners on a cobblestone street">
+            <h2>how to join us?</h2>
+            <article>
+                <div>
+                    <p>
+                        join us! all you need to do is arrive at one of our saturday
+                        integration sessions. we will explain how our group works,
+                        what events are about to happen and you'll also get a chance
+                        to know us on a personal level. free coffee included :)
+                    </p>
+                    <p>
+                        for details check our ig. every week we update meetings' places.
+                    </p>
+                </div>
+                <div>
+                    <img src="images/post-run.jpg"
+                        alt="Runners resting with water after a workout">
+                    <a href="https://www.instagram.com/linneasrunclub/" target="_blank">FOLLOW US ON IG</a>
+                </div>
+            </article>
+            <h2>check more of our artwork!</h2>
+            <ul>
+                <li>
+                    <img src="images/start-here.jpg"
+                        alt="Running shoes next to a painted runner silhouette">
+                </li>
+                <li>
+                    <img src="images/race-legs.jpg"
+                        alt="Black and white photo of runners in a race">
+                </li>
+                <li>
+                    <img src="images/motion-blur.jpg"
+                        alt="Motion blur of runners' legs on the road">
+                </li>
+            </ul>
+        </section>
+
+        <section id="playlists">
+            <h2>sparkling playlists</h2>
+            <p>
+                we have a playlist for every occasion. listen to the latest pop hits
+                and glitter your way to the finish line.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>contact us</h2>
+            <p>if you have any questions, please contact us at hello@linneasrunclub.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>see you on track!</p>
+    </footer>
 </body>
+
 </html>
