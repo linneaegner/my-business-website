@@ -1,4 +1,4 @@
-<!-- 
+<!--
 Bygg hemsidans HTML-struktur: header, navigationsmeny, startsida, informationssektion,
 kontaktsektion och footer. Använd semantiska HTML-element.
 Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitter.
@@ -10,30 +10,42 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Linneas runclub</title>
 </head>
 
 <body>
-    <header>
-        <img src="images/race-legs.jpg"
+    <header class="hero">
+        <img class="hero__image" src="images/race-legs.jpg"
             alt="Runner jogging with thumbs up">
-        <h1>linneas runclub</h1>
+        <div class="hero__content">
+            <h1 class="hero__brand">linneas runclub</h1>
+            <p class="hero__headline">pop music, fika &amp; glitter</p>
+            <p class="hero__lead">
+                saturday runs for people who show up loud, soft, and sparkling.
+            </p>
+            <a class="hero__cta" href="#friends">join a saturday run</a>
+        </div>
     </header>
 
-    <nav>
+    <nav class="site-nav" aria-label="Main">
         <ul>
             <li><a href="#fika-lovers">fika lovers</a></li>
             <li><a href="#runners">runners</a></li>
             <li><a href="#friends">friends</a></li>
+            <li><a href="#playlists">playlists</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="fika-lovers">
+        <section id="fika-lovers" class="section section--about">
             <h2>who we are?</h2>
-            <article>
+            <article class="about">
                 <p>
                     we are a running group that loves pop music, fika and glitter.
                     our team unites people from different professions.
@@ -45,9 +57,9 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
             </article>
         </section>
 
-        <section id="runners">
+        <section id="runners" class="section section--runners">
             <h2>meet our runners</h2>
-            <ul>
+            <ul class="runners">
                 <li>
                     <img src="images/runner-linnea.jpg"
                         alt="Runner Linnea">
@@ -66,12 +78,12 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
             </ul>
         </section>
 
-        <section id="friends">
-            <img src="images/group-run.jpg"
+        <section id="friends" class="section section--join">
+            <img class="join__image" src="images/group-run.jpg"
                 alt="Group of runners on a cobblestone street">
-            <h2>how to join us?</h2>
-            <article>
-                <div>
+            <div class="join__copy">
+                <h2>how to join us?</h2>
+                <article>
                     <p>
                         join us! all you need to do is arrive at one of our saturday
                         integration sessions. we will explain how our group works,
@@ -81,24 +93,26 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
                     <p>
                         for details check our ig. every week we update meetings' places.
                     </p>
-                    <a href="https://www.instagram.com/linneasrunclub/" target="_blank">FOLLOW US ON IG</a>
-                </div>
-            </article>
-            <h2>check more of our artwork!</h2>
-            <ul>
-                <li>
-                    <img src="images/start-here.jpg"
-                        alt="Running shoes next to a painted runner silhouette">
-                </li>
-                
-                <li>
-                    <img src="images/motion-blur.jpg"
-                        alt="Motion blur of runners' legs on the road">
-                </li>
-            </ul>
+                    <a class="button" href="https://www.instagram.com/linneasrunclub/" target="_blank" rel="noopener noreferrer">follow us on ig</a>
+                </article>
+            </div>
+
+            <div class="artwork">
+                <h2>check more of our artwork!</h2>
+                <ul class="artwork__list">
+                    <li>
+                        <img src="images/start-here.jpg"
+                            alt="Running shoes next to a painted runner silhouette">
+                    </li>
+                    <li>
+                        <img src="images/motion-blur.jpg"
+                            alt="Motion blur of runners' legs on the road">
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section id="playlists">
+        <section id="playlists" class="section section--playlists">
             <h2>sparkling playlists</h2>
             <p>
                 we have a playlist for every occasion. listen to the latest pop hits
@@ -106,13 +120,16 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
             </p>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section section--contact">
             <h2>contact us</h2>
-            <p>if you have any questions, please contact us at hello@linneasrunclub.com</p>
+            <p>
+                if you have any questions, please contact us at
+                <a href="mailto:hello@linneasrunclub.com">hello@linneasrunclub.com</a>
+            </p>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>see you on track!</p>
     </footer>
 </body>
