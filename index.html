@@ -40,18 +40,39 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
             <li><a href="#playlists">playlists</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
+        <div class="site-nav__actions">
+            <button type="button" id="theme-toggle" class="nav-button" aria-pressed="false">
+                dark mode
+            </button>
+        </div>
     </nav>
 
     <main>
         <section id="fika-lovers" class="section section--about">
             <h2>who we are?</h2>
             <article class="about">
-                <p>
-                    we are a running group that loves pop music, fika and glitter.
-                    our team unites people from different professions.
-                    during our post-run coffee you can hang out with artists,
-                    programmers or athletes. there's no chance of boredom with us!
-                </p>
+                <div class="about__text">
+                    <p>
+                        we are a running group that loves pop music, fika and glitter.
+                        our team unites people from different professions.
+                        during our post-run coffee you can hang out with artists,
+                        programmers or athletes. there's no chance of boredom with us!
+                    </p>
+                    <button type="button" id="info-toggle" class="button" aria-expanded="false" aria-controls="extra-info">
+                        show more info
+                    </button>
+                    <div id="extra-info" class="extra-info" hidden>
+                        <p>
+                            we meet every saturday morning, rain or shine.
+                            pace doesn't matter — glitter and good vibes do.
+                            after the run we always grab fika together and swap playlist tips.
+                        </p>
+                        <p>
+                            new runners are welcome anytime. just show up, say hi,
+                            and we'll make sure you feel at home from kilometre one.
+                        </p>
+                    </div>
+                </div>
                 <img src="images/fika-brunch.jpg"
                     alt="Brunch and coffee on a wooden table">
             </article>
@@ -125,7 +146,25 @@ Jag ska bygga en anmälningssida till min runclub. Temat är popmusik och glitte
             <p>
                 if you have any questions, please contact us at
                 <a href="mailto:hello@linneasrunclub.com">hello@linneasrunclub.com</a>
+                or send a message below.
             </p>
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="contact-form__field">
+                    <label for="name">name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="contact-form__field">
+                    <label for="email">e-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="contact-form__field">
+                    <label for="message">message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <p id="form-error" class="contact-form__error" role="alert" hidden></p>
+                <p id="form-success" class="contact-form__success" role="status" hidden></p>
+                <button type="submit" class="button">send message</button>
+            </form>
         </section>
     </main>
 
